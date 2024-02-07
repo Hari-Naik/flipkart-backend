@@ -6,13 +6,13 @@ const stripe = require("stripe")(process.env.SECERET_KEY);
 
 const app = express();
 
-// app.use(
-//   cors({
-//     origin: ["https://flipkart-clone-taupe.vercel.app"],
-//   })
-// );
+app.use(
+  cors({
+    origin: ["https://flipkart-clone-taupe.vercel.app"],
+  })
+);
 
-app.use(cors());
+// app.use(cors());
 
 app.use(express.static("public"));
 app.use(express.json());
